@@ -7,8 +7,13 @@ services:
     volumes:
         - ./app:/home/app-user/app
         - /home/app-user/app/node_modules
+    env_file:
+      - .env
     environment:
-      NODE_ENV: production
+      - CONSUMER_KEY
+      - CONSUMER_SECRET
+      - ACCESS_TOKEN
+      - ACCESS_TOKEN_SECRET
   aws:
     # https://github.com/sekka1/aws-cli-docker
     image: garland/aws-cli-docker

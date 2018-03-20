@@ -5,24 +5,20 @@
   "author": "Blake Watkins",
   "main": "apiController.js",
   "scripts": {
-    "build-test": "BUILD_TYPE=test node --experimental-modules apiController.mjs",
-    "build": "BUILD_TYPE=all node --experimental-modules apiController.mjs",
+    "build-test": "NODE_ENV=dev node --experimental-modules apiController.mjs",
+    "build": "NODE_ENV=production node --experimental-modules apiController.mjs",
     "lint": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "dotenv": "^4.0.0",
+    "axios": "^0.18.0",
     "eslint": "^4.12.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.5.1",
-    "google-auth-library": "^0.12.0",
-    "googleapis": "^23.0.0",
+    "oauth": "^0.9.15",
     "twit": "^2.2.9",
     "yarn": "^1.3.2"
-  },
-  "devDependencies": {
-    "nodemon": "^1.9.1"
   }
 }

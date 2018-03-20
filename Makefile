@@ -13,3 +13,6 @@ publish:
   run twit &&\
   docker-compose -f docker-compose-prod.yml \
   run aws
+
+pub-down:
+	docker-compose -f docker-compose-prod.yml down

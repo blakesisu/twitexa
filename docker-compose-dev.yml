@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+  twit:
+    build: app
+    # command: yarn dev
+    command: node_modules/.bin/nodemon server.js
+    ports:
+        - '3000:3000'
+        - '3001:3001'
+    volumes:
+        - ./app:/home/app-user/app
+        - /home/app-user/app/node_modules
+    environment:
+      NODE_ENV: development
+      TWIT_PORT: 3000

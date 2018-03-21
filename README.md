@@ -1,1 +1,1 @@
-# TWITEXA
+# Twitter api test app
